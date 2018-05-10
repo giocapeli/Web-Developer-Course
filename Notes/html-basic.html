@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anotações - HTML Básico - Curso de Web Developer</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Anotações de Estudo</h1>
+	<h2>HTML Básico</h2>
+	<p>O material a seguir é um resumo da introdução em HTML do curso "The Web Developer Bootcamp" e outros estudos.</p>
+
+	<h3>O que é HTML?</h3>
+	<p>HTML não é uma linguagem de programação, mas sim uma markup language, ou, linguagem de marcação que é estruturada para dar significado e organizar as informações dos sites. Ela é construída a partir de elementos formados por um conteúdo inserido dentro de uma tag.</p>
+
+	<h3>O que é um elemento?</h3>
+	<p>O elemento é um conjunto formado pela tag, atributos e conteúdo.</p>
+	<textarea disabled wrap="off" cols="50" rows="1"><Opening tag>Content</Closing tag></textarea>
+	<p>A Opening tag fica entre "<" e ">" (menor e maior) e indica o início do elemento, a Closing tag também fica entre "<" e ">" porém com uma "/" para indicar o fechamento do elemento.</p>
+
+	<h3>Elementos Vazios:</h3>
+	<p>Alguns elementos não possuem conteúdo ou fechamento e são chamados de elementos vazios. Ex:</p>
+	<textarea disabled wrap="off" cols="60" rows="1"><img src="imagem/imagem.jpg" alt "imagem de teste"></textarea>
+	<textarea disabled wrap="off" cols="40" rows="1"><strong>,<br>,<a>, entre outros.</textarea>
+
+	<h3>Aninhando elementos:</h3>
+	<p>É possível inserir elementos dentro de elementos, porém um elemento deve estar sempre completamente dentro do outro, sem intersecções. Ex:</p>
+	<p>Modo incorreto:</p>
+	<textarea disabled wrap="off" cols="40" rows="1"><p>Olá <strong>Mundo</p></strong></textarea>
+	<p>Modo correto:</p>
+	<textarea disabled wrap="off" cols="40" rows="1"><p>Olá <strong>Mundo</strong></p></textarea>
+	
+	<h3>O que são atributos?</h3>
+	<p>São "detalhamentos", informações passadas dentro da tag para que ela se comporte de determinada maneira ou recebe determinada característica. São compostos por um nome e um valor e cada tag pode possuir diversos atributos. Ex:</p>
+	<textarea disabled wrap="off" cols="60" rows="1"><p nome="valor" nome2="valor2">Olá mundo.</p></textarea>
+	<p>Alguns valores de atributos funcionam mesmo sem estarem entre áspas, porém mantêr o padrão ajuda o aprendizado e a leitura.</p>
+
+	<h3>Estrutura básica do HTML:</h3>
+	<p>A estutura básica do HTML é composta por esses elementos:</p>
+	<textarea disabled wrap="off" cols="50" rows="10">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Meu título</title>
+	</head>
+	<body>
+		Conteúdo
+	</body>
+</html>
+	</textarea>
+	<ol>
+		<li><strong>!DOCTYPE html:</strong> A primeira linha é sempre o DOCTYPE, ela não é uma tag mas sim uma instrução ao navegador de que o código a seguir é um html. É obrigatório.</li>
+		<li><strong>html:</strong> É o elemento que envolve todo conteúdo, visível ou não, da página. Também chamado de root element.</li>
+		<li><strong>head:</strong> É o elemento que serve como "container" de todo conteúdo ou instrução que não ficará visível na página principal, como o título da página, keywords, descrição para mecanismos de busca, referências aos CSS, entre outros.</li>
+		<li><strong>title:</strong> Define o título da página que aparece na aba do browser, como padrão ao favoritar a página e como nome da página nas buscas do google.</li>
+		<li><strong>meta charset="utf-8":</strong> Esse elemento indica que o documento utiliza o UTF-8, um padrão de código que inclui a grande maioria dos caracteres conhecidos e utilizados. Problemas na reprodução de acentos podem vir da utilização de outros códigos, como o ASCII. </li>
+		<strong>Outras metatags podem ser usadas.</strong> Metatags aparentam não ter nenhum efeito na página em si, mas fornecem informações externas para buscadores por exemplo. Além do charset já visto, segue outras metatags:
+			<ul>
+				<li>Author: Nome do autor da página.</li>
+				<li>Copyright: Direitos Autorais.</li>
+				<li>Description: Descrição da página.</li>
+				<li>Expires: Data de expiração do documento.</li>
+				<li>Keywords: Palavras-chave relacionadas à página.</li>
+			</ul>
+		<li><strong>body:</strong> É o elemento que armazena o conteúdo que irá ser exibido para o usuário que estiver navegando na página.</li>
+	</ol>
+
+	<h3>Como inserir imagens?</h3>
+	<p>As imagens são inseridas com a tag "img", que é um elemento vazio, ou seja não precisa da tag de fechamento.</p>
+	<textarea disabled wrap="off" cols="100" rows="1"><img src="caminho ou url da imagem" alt="texto alternativo caso a imagem não possa ser exibida"></textarea>
+	<p>A mensagem alternativa deve de preferência ser descritiva e não apenas o nome da imagem, assim poderá exercer sua função.</p>
+
+	<h3>Marcações:</h3>
+	<p>Os elementos básicos de marcação são:</p>
+	<ul>
+		<li><strong>Heading:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><h1>...</h1></textarea><br>
+			São os cabeçalhos que atribuem automaticamente certas características de relevância, tamanho, para o conteúdo interno. São 6 níveis de headings, do h1 ao h6.
+		</li>
+		<li><strong>Paragraphs:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><p>...</p></textarea><br>
+			Contêm o parágrafo, o texto de leitura regular.
+		</li>
+		<li><strong>Strong:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><strong>...</strong></textarea><br>
+			Funciona como um "b" (bold), deixa o texto interno em negrito.
+		</li>
+		<li><strong>Emphasis:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><em>...</em></textarea><br>
+			Funciona como um "i" (italic), deixa o texto interno em itálico.
+		</li>
+		<li><strong>Lists:</strong><br>
+			<textarea disabled wrap="off" cols="30" rows="3"><ol><li>...</li></ol>
+ou
+<ul><li>...</li><ul></textarea><br>
+			Elementos em listas, ordenadas em números (ol) ou não ordenas, com bullet points (ul). Cada item na lista fica dentro de uma tag "li".
+		</li>
+		<li><strong>Divs:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><div>...</div></textarea><br>
+			São containers genéricos para agrupar outros elementos que tem algo em comum ou precisam receber algum atributo em comum. Os divs não são inline, portanto quebram a linha.
+		</li>
+		<li><strong>Spam:</strong><br>
+			<textarea disabled wrap="off" cols="20" rows="1"><spam>...</spam></textarea><br>
+			É um container como o div porém é um elemento inline, que não quebra a linha.
+		</li>
+	</ul>
+
+	<h3>Como inserir links?</h3>
+	<p>Os links são compostos pela anchor tag "a", o atributo "href", e o conteúdo (texto ou imagem). Ex:</p>
+	<p>Conteúdo em texto:</p>
+	<textarea disabled wrap="off" cols="60" rows="1"><a href="caminho/index.html">Link para página X</a></textarea>	
+	<p>Conteúdo em imagem:</p>
+	<textarea disabled wrap="off" cols="80" rows="1"><a href="caminho/index.html"><img src="caminho/imagem.jpg"></a></textarea>
+
+	<h3>Adicionando comentários:</h3>
+	<p>Os comentáios não são exibidos para o usuário e não tem nenhuma função na página, mas sim servem como guia de leitura e entendimento do código para o desenvolvedor. Os comentários são de suma importância e sua qualidade informativa é proporcional à complexidade e tamanho do código, quanto mais difícil e longo ele é, mais os comentários ajudam tanto quem escreveu quanto quem irá modificar a entender o que foi feito. Os comentários também servem para fazer testes no código, ativando ou desativando elementos.</p>
+	<p>Os comentários devem estar entre a seguite tag:</p>
+	<textarea disabled wrap="off" cols="40" rows="1"><!-- Comentário --></textarea>
+	<p><em>(Caso o sublime esteja com problema para reconhecer o atalho ctrl+/ para adicionar comentário, mude para ctrl+1 por exemplo)</em></p>
+
+	<a href="html-intermediare.html"><h3>Ir para próxima aula: Avançando no HTLM.</h3></a>
+
+</body>
+</html>
