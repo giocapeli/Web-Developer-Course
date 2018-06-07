@@ -1,0 +1,148 @@
+/*Geral*/
+
+body{
+    background: #262626;
+}
+
+p {
+    font-family: Calibri;
+    font-size: 17px;
+}
+
+h1 {
+    font-family: Roboto Mono;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: Roboto;
+    font-size: 40px;
+}
+
+a {
+    color: white;
+}
+
+/*Class*/
+
+.content { /*referente à página central com o conteúdo informativo*/
+    max-width: 900px;
+    border: 30px solid #262626;
+    padding: 50px;
+    margin: 100px auto;
+    font-family: Calibri;
+    font-size: 17px;
+    background: white;
+    color: #262626;
+}
+
+.description { /*paragrafo com descrição do tópico*/
+    border-left: 4px solid red;
+    margin: 30px;
+    padding: 0 10px;
+}
+
+.wordEn { /*termos tecnicos em inglês não traduzidos*/
+    font-family: Roboto Mono;
+    font-style: italic;
+    font-size: 14px;
+    color: red;
+
+}
+
+.tag { /*todos os nomes de tags serão destacados*/
+    font-family: Roboto Mono;
+    font-style: bold;
+    font-size: 16px;
+    color: blue;
+}
+
+.titleEn { /*o título em inglês para ancorar os termos originais em inglês*/
+    font-size: 18px;
+    font-family: Roboto Mono;
+    color: white;
+    line-height: 0;
+    font-style: 100;
+ }
+
+.titlePt { /*o título em português para tentar traduzir o significado do termo original*/
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 0;
+    margin-top: 40px;
+    font-style: 100;
+}
+
+.titleEnBackground {/* o fundo do título em inglês, que será deslocado e destado*/
+    background: red;
+    margin-top: 30px;
+    margin-left: -100px;
+    padding-left: 98px;
+    padding-right: 100px;
+}
+
+.topic { /*há necessidade de um separador de tópicos?*/
+    border-bottom: 0px solid red;
+    margin-bottom: 50px;
+}
+
+.tab { /*essa é a tabulação para identar as linhas de código visíveis*/
+    margin-left: 30px;
+}
+
+.result { /*padrão da tabela com o resultado visual do exemplo*/
+    background: white;
+    padding: 30px 20px;
+    width: 95%;
+    margin: 0 25px;
+}
+.codeTable { /*padrão da tabela com o exemplo de código*/
+    margin: auto -55px;
+    background: #262626;
+    font-family: Roboto Mono;
+    font-size: 14px;
+    font-style: regular;
+    width: 110%;
+}
+.lineNumber { /*lateral esquerda com a numeração das linhas de código, somente para melhor visual*/
+    min-width: 40px;
+    vertical-align: top;
+    text-align: center;
+    color: #9b9b9b;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+.lineCode { /*somente o texto de exemplo de codigo, ver se é possível incorporar em outra classe*/
+    color: white;
+    padding: 5px 20px;
+    min-width: 900px;
+    border-left: 1px solid white;
+}
+
+.exampleParagraph { /*apenas o título da seção de exemplo, verificar necessidade real*/
+    color: #262626;
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 20px 0 0 0;
+    line-height: 0;
+}
+
+.nextPage { /*padrao do link de próxima página*/
+    font-family: Roboto Mono;
+    font-size: 20px;
+    background: blue;
+    color: white;
+    float: right;
+    padding: 20px;
+}
+
+.pageBack { p/*adrão do link de página anterior*/
+    font-family: Roboto Mono;
+    font-size: 20px;
+    background: purple;
+    color: white;
+    float: left;
+    padding: 20px;
+}

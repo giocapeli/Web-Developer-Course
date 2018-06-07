@@ -1,0 +1,278 @@
+CSS
+
+Como criar estilos para o html?
+Primeiramente é possível criar uma propriedade "style" dentro da tag no valor dela atribuir os estilos que desejar.
+Ex:
+<h1 style="color: red;">Title</h1>
+
+Outra opção é usando a tag <style> diretamente no arquivo html e dentro dela atribuir o estilo desejado. Esta tag permite inserir um código CSS dentro do html.
+ex:
+<style type="text/css">
+	h1 {
+		color: red;
+	}
+</style>
+
+Porém a melhor forma atualmente é criando um arquivo CSS separado do html na qual podermos separar as funções de cada um: HTML conterá apenas a estrutura e CSS apenas o estilo.
+
+Cascading Style Sheets
+
+
+Regra geral:
+selector {
+	property: value;
+	property2: value2;
+}
+ex:
+h1 {
+	color: red;
+	font-size: 15px;
+} Faz todos textos em h1 ficarem em vermelho e com tamanho 15px.
+
+img {
+	border-color: blue;
+	border-width: 5px;
+} Faz todas iagens terem uma borda azul de 5px.
+
+Cores:
+Há várias cores prontas já nomeadas no CSS, porém, é muito mais comum e mais fácil chamar as cores pelos seus códigos hexadecimal, RGB ou RGBA. 
+
+Um código hexadecimal tem base 16, ou seja, inclui os dígitos de 0 à 9 e os algarismos A à F. O código de cores hexadecimal é representado pelo # + 6 digitos (#_ _ _ _ _ _) que representa uma combinação de 3 conjuntos de 2 digitos, a representação do RGB (#RRFFBB), ou seja, quanto mais próximo de 00 menos daquela cor haverá e quanto mais perto do FF maior a presença da cor.
+ex:
+h1 {
+	color: #000000;
+} Não há nenhuma cor, representa o preto.
+
+h3 {
+	color: #FF0000;
+} o red está no máximo e o green e blue zerados, ou seja, um vermelho fote.
+
+O código rgb é similar ao haxadecimal pois é representado pela quantidade de red, green e blue que a cor desejada possui, porém tem uma sintaxe diferente. A base dele é 10, então só aceita dígitos de 0 à 9, sendo seu valor mínimo 0 e o máximo 255.
+ex:
+h1 {
+	color: rgb(0,255,0);
+} O red e blue estão zerados e green no valor máximo, portanto temos um verde puro.
+
+RGBA
+O RGBA é similar ao RGB porém com um quarto canal, o ALPHA, que representa a transparência. Esse canal pode ir de 0 a 1 , permitindo decimais.
+EX:
+h4 {
+	color: rgba(10,10,255, .5)
+}
+
+Blackground:
+
+A propriedade "background" também é representada por uma imagem ou cores em hexadecimal, rgb ou rgba.
+EX:
+body {
+	background: url(http://);
+}
+
+div {
+	background: rgba(10,10,10, 0.5);
+}
+
+Border:
+A propriedade border tem 3 subpropriedades que devem ser definidas: width, color e style.
+EX:
+div {
+	border-color: red;
+	border-width: 6px;
+	border-style: solid;
+}
+ div {
+ 	border: 6px solid red;
+ }
+
+ Adicionandno ID:
+ Ao adicionar a propriedade ID à uma tag, podemos criar um style esclusivo pra o item que contenha aquela ID. Indicamos ao CSS que estamos utilciando uma ID com: #+valorDoId
+ EX:
+ h1 {
+	 color: red;
+ }
+
+ #special {
+ 	color: blue;
+ } Aqui indicamos ao CSS para aplicar a propriedade color na tag que tiver o id special.
+
+ <h1>Hello</h1>
+ <h1 id="special">Hello</h1>
+
+Porém apesar de podermos criar quantas id quisermos, cada id pode ser usada apenas uma vez com cada valor, ou seja, dois itens não podem ter o mesmo valor de id.
+Para aplicar o mesmo valor a vários itens utilizamos a propriedade CLASS.
+
+Class
+A propriedade class é semelhante ao ID, porém ela pode ser aplicada a vários itens que precisarem ter a mesma classe. Indicamos ao CSS que estmos utilizando uma classe com: .+valorDaClasse
+ Podemos adicionar mais de uma class no mesmo elemento separando seus nomes por espaço.
+EX:
+h1 {
+	 color: red;
+ }
+
+ .special {
+ 	color: blue;
+ }
+ .special2 {
+ 	border: 1px;
+ }
+
+
+<h1>Hello</h1>
+ <h1 class="special">Hello</h1>
+ <p>Hello</p>
+ <p class="special special2">Hello</p>
+
+
+
+
+Principais selectors:
+
+Element Selector
+element {
+	Aplicará a todos os elementos iguais ao element.
+}
+
+Class Selector
+.class {
+	Aplicará em todos elementos que possuirem o valor de class.
+}
+
+Id Selector
+#id {
+	Aplicará no elemento com valor do id. Cada valor de id é único e só pode ser aplicado apenas em um único elemento.
+}
+
+Star
+* {
+	Aplicará para todos os elementos da página.
+}
+
+Descendant Selector
+element1 element2 {
+	Aplicará apenas nos element2 que estiverem dentro de um element1. Pode haver quantos descendants necessários. Há ordem hierárquica.
+}
+
+Adjacent Selector
+element1 + element2 {
+	Aplicará apenas aos element1 que vierem imediatamente após um element2. Não há ordem hierárquica, ou seja, o nível de identação de ambos é o mesmo.
+}
+
+Attribute Selectors
+tag[attribute] {
+	Aplicará em todas as tags que tiverem o attribute, independete do valor do mesmo.
+}
+
+tag[attribute="value"] {
+	Aplicará em todas tags que tiverem o attribute com o mesmo value.
+}
+
+tag[attribute*="expression"] {
+	Aplicará para todas as tags que tiverem dentro do value de seu attribute a expression designada, isso é, selecionaria tanto algo como "sdasdsadexpression123123" como também "expression".
+}
+
+tag[attribute^="expression"] {
+	Aplicará para todas as tags que iniciarem com expression em seu value dentro do attribute.
+}
+
+tag[attribute$="expression"] {
+	O mesmo que o anterior, porém apenas para os que terminarem com a expression.
+}
+
+Nth of type
+element:nth-of-type(x) {
+	Aplicará aos elements na posição x. Pode ser substituído por "odd" ou "even" para selecionar nas posições ímpares e pares.
+}
+
+element:nth-of-type(xn) {
+	O mesmo do anterior porém apenas aos multiplos do número x.
+}
+
+Quando tentamos aplicar valores diferentes a uma mesma propriedade de um mesmo elemento por selectors diferentes, o com maior grau de especificidade é o aplicado:
+Elements < Classes, attributes < Ids < inline styles.
+
+Para comentar em CSS:
+Utilizamos /* Comment */
+
+Fontes:
+Para definir a fonte usamos a propriedade "font-family" e no valor colocamos o nome da fonte entre áspas. Algumas fontes já são mais disponíveis em um sistema operacional do que em outro, no site www.cssfontstack.com é possível checar a disponibilidade das mais comuns.
+Ex:
+p {
+	font-family: "Arial";
+	font-size: 12px;
+}
+
+Tamanhos dinâmicos - EM
+O tamanho da fonte pode ser definido de outras formas além de pixels. O EM é uma medida de proporção com relação a outra fonte. Caso nenhum tamaho de fonte seja atribuído o padrão de 1em=16px, caso um valor 14px seja definido no body, por exemplo, o em passa a ser 14 para toda a página exceto se outro tamanho seja definido em pixels para algum elemento. Neste último caso, o em será alterado para todo elemento que estiver dentro dele. O EM é um valor em cascata, ou seja é definido sempre em relação ao tamanho da fonte do elemento na qual ele está inserido.
+EX:
+body {
+	font-size: 24px;
+} Aqui definimos que o texto em body terá 24px
+p {
+	font-size: 0.5em;
+} Como p está dentro de body com um em=0.5 o resultado é um texto em 12px.
+span {
+	font-size: 3.0em;
+} Neste exemplo o conteúdo de "span" que estiver dentro de um "p" terá três vezes o seu tamanho, ou seja, 36px.
+
+REM
+É muito semehante ao EM porém é relativo à página toda, ou seja, ele não depende do valor do parent, ou seja, mantêm a mesma referência para a página toda.
+
+Peso das fontes:
+Para determinar o peso das fontes usamos a propriedade font-weight. Podemos usar as pré-deinições bold, algumas fontes permitem valores de 100 a 800 para definir o peso das mesmas.
+EX:
+p {
+	font-weight: bold;
+}
+span {
+	font-weight: 400;
+}
+
+Altura e espaçamento das linhas:
+Usamos a propriedade line-height para definir o tamanho da linha, ou, seu espaçamento.
+EX:
+p {
+	line-weight: 2;
+} Aqui temos espaçamento duplo nas linhas de p.
+
+Alinhamento de texto:
+Nada mais é que a propriedade que define o alinhamento.
+h1 {
+	text-align: center;
+} Aqui temos um alinhamento centralizado.
+
+Text Decoration
+Usamos para colocar algumas propriedades como sublinhado e riscado.
+EX:
+h1 {
+	text-decoration: underline;	
+}
+h2 {
+	text-decoration: line-through
+}
+
+Adicionar font:
+Para adicionar uma font, seja do Google ou do seu próprio servidor, adicionamos um link tag semelhante ao do CSS, com os atributos rel e type mostrando que é um style, e, href, com o endereço da fonte.
+EX:
+<link href="endereço da fonte" rel="stylesheet" type="text/css">
+
+Box Model:
+Todo Elemento é represnetado por um retangular box, ou caixa retangular. Cada box tem 4 características, ou propriedades: margin, border, padding e content.
+
+Content é o conteúdo do box. Suas dimensões podem ser definidas pelas propriedades width e height, que por sua vez podem receber valores em pixel ou em % (proporção com relação ao seu parent). Também podemos utilizar a propriedade max-width para definir qual o tamanho máximo o conteúdo vai ver porém sem limitar o seu mínimo.
+Border é a borda que envolve o conteúdo. Pode ser definido pela propriedade geral border ou pelas propriedades de cada lado, como border-left.
+Padding é o espaço entre o conteúdo e a borda. Também pode ser definido pela propriedade geral padding ou por cada lado.
+Margin é o espaço entre as bordas de um elemento e qualquer outro elemento adjacente ou o limite da página.
+
+Também é possível definir os valores específicos de cada lado usando apenas a propriedade geral e inserindo todos ou parte dos valores. Também podemos definir um dos valores como auto, que será definido automaticamente pelo sietema.
+EX:
+element {
+	border: 1px 2px 0px 3px; Segue sentido horário: top, right, bottom e left.
+	margin: 50px auto; Um valor para Top e Bottom e outro valor para Right e Left, que neste caso está definido para ser automático.
+	padding: 50px; O mesmo valor para todos
+}
+
+Float
+A propriedade float permite que os elementos sejam alinhados em sequência. *ver a definição correta de float.
+
+Text TRansform
+Ver definição.

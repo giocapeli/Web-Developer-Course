@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet"> <!-- Fonte Roboto, Roboto Mono e Roboto Condensed -->
+    <title>HTML Basic - Introdution</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<div class="content">
+
+    <h1>The Web Developer Bootcamp Notes</h1>
+    <h2>HTML Basic - Introdution</h2>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Hypertext Markup Language</h4></td></table>
+        <h3 class="titlePt">O que é HTML?</h3>
+        <p class= "description">HTML não é uma linguagem de programação, mas sim uma <span class="wordEn">markup language</span>, ou, linguagem de marcação que é estruturada para dar significado e organizar as informações dos sites. Ela é construída a partir de <span class="wordEn">elements</span> formados por um <span class="wordEn">content</span> inserido dentro de uma <span class="wordEn">tag</span>. Ela pode trabalhar junto a outras linguagens como CSS e Javascript, que por sua vez serão usadas respectivamente para definir a aparência da página e suas funcionalidades.</p>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">HTML elements</h4></td></table>
+        <h3 class="titlePt">O que é um elemento?</h3>
+        <p class="description">O elemento é um conjunto formado por uma <span class="wordEn">tag</span> e seu <span class="wordEn">content</span>, podendo ou não possuir <span class="wordEn">attributes</span>.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1
+                </td>
+                <td class="lineCode">
+                    &lt;tag&gt;content&lt;/tag&gt;
+                </td>
+            </tr>
+        </table>
+        <p class="normalParagraph">A <span class="wordEn">opening tag</span> fica entre símbolos de "&lt;" e "&gt;" e indica o início do <span class="wordEn">element</span>, a <span class="wordEn">closing tag</span> também fica entre "&lt;" e "&gt;" porém com uma "/" para indicar o fechamento do <span class="wordEn">element</span>.</p>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Empty elements</h4></td></table>        
+        <h3 class="titlePt">Elementos vazios</h3>
+        <p class="description">Alguns <span class="wordEn">elements</span> não possuem conteúdo ou fechamento e são chamados de <span class="wordEn">empty elements</span>.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1<br>
+                    2<br>
+                    3
+                </td>
+                <td class="lineCode">
+                    &lt;img src="imagem/imagem.jpg" alt "imagem de teste"&gt;<br>
+                    &lt;br&gt;<br>
+                    &lt;a&gt;
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Nested elements</h4></td></table>
+        <h3 class="titlePt">Elementos aninhados</h3>
+        <p class="description">É possível inserir um <span class="wordEn">element</span> dentro de <span class="wordEn">element</span>, porém um deve estar sempre completamente dentro do outro, sem intersecções.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1<br>
+                    2<br>
+                    3
+                </td>
+                <td class="lineCode">
+                    &lt;body&gt;<br>
+                    &lt;p&gt;Olá &lt;strong&gt;Mundo&lt;/strong&gt;!&lt;/p&gt;<br>
+                    &lt;/body&gt;
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Attributes</h4></td></table>
+        <h3 class="titlePt">O que são atributos?</h3>
+        <p class="description">Os <span class="wordEn">attributes</span> são como detalhamentos, informações passadas dentro da <span class="wordEn">tag</span> para que ela se comporte de determinada maneira ou receba determinada característica. São compostos por um <span class="wordEn">name</span> e um <span class="wordEn">value</span>.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1
+                </td>
+                <td class="lineCode">
+                    &lt;p class="classValue" id="idValue"&gt;Olá mundo.&lt;/p&gt;
+                </td>
+            </tr>
+        </table>
+        <p class="normalParagraph">Cada <span class="wordEn">tag</span> pode possuir diversos <span class="wordEn">attributes</span> que depois podem ser facilmente conectados a funções em CSS ou Javascript.</p>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Basic HTML document</h4></td></table>
+        <h3 class="titlePt">Estrutura básica do HTML</h3>
+        <p class="description">A estrutura básica do HTML é composta pelas <span class="wordEn">tags</span> <span class="tag">&lt;!DOCTYPE html&gt;</span>, <span class="tag">&lt;html&gt;</span>, <span class="tag">&lt;head&gt;</span> e <span class="tag">&lt;body&gt;</span>. São quase sempre presente a <span class="tag">&lt;meta charset&gt;</span> e o <span class="tag">&lt;title&gt;</span>.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1<br>
+                    2<br>
+                    3<br>
+                    4<br>
+                    5<br>
+                    6<br>
+                    7<br>
+                    8<br>
+                    9<br>
+                    10<br>
+                </td>
+                <td class="lineCode">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    <span class="tab"></span>&lt;head&gt;<br>
+                    <span class="tab"></span> <span class="tab"></span>&lt;meta charset="utf-8"&gt;<br>
+                    <span class="tab"></span> <span class="tab"></span>&lt;title&gt;Meu título&lt;/title&gt;<br>
+                    <span class="tab"></span>&lt;/head&gt;<br>
+                    <span class="tab"></span>&lt;body&gt;<br>
+                    <span class="tab"></span><span class="tab"></span>Conteúdo<br>
+                    <span class="tab"></span>&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </td>
+            </tr>
+        </table>
+        <p class="normalParagraph">
+            <ul>
+                <li><span class="wordEn">!DOCTYPE html</span>: Essa vai ser sempre a primeira linha do documento, ela não é uma <span class="wordEn">tags</span> mas sim uma instrução ao navegador de que o código que vem a seguir é um html. É obrigatório.</li>
+                <li><span class="wordEn">html</span>: É o <span class="wordEn">element</span> que envolve todo conteúdo, visível ou não, da página. Também chamado de <span class="wordEn">root element</span>.</li>
+                <li><span class="wordEn">head</span>: Serve como container de todo <span class="wordEn">content</span> ou instrução que não ficará visível na página principal, como o título da página, referências aos arquivos CSS, keywords e descrições para mecanismos de busca.</li>
+                <li><span class="wordEn">meta</span>: As <span class="wordEn">metatags</span> aparentam não ter nenhum efeito na página em si, mas fornecem informações para o browser e para buscadores. A quase sempre utilizada é a <span class="wordEn">charset="utf-8"</span> que indica ao browser que o documento utiliza o UTF-8, um padrão de código que inclui a grande maioria dos caracteres conhecidos. Problemas de não reconehcimento de acentuação, por exemplo, pode indicar a utilização de outros códigos, como o ASCII.</li>
+                <li><span class="wordEn">title</span>: Define o título da página que aparecerá na aba do navegador, como padrão ao favoritar a página e título nos sistemas de busca do google.</li>
+                <li><span class="wordEn">body</span>: É o <span class="wordEn">element</span> que armazena <span class="wordEn">content</span> visível, ou seja, o que o usuário irá visualizar ao entrar na página.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="topic">
+        <table class="titleEnBackground"><td><h4 class="titleEn">Comments</h4></td></table>
+        <h3 class="titlePt">Adicionando comentários ao código</h3>
+        <p class="description">Os comentários não são exibidos na página e nem tem nenhuma função ao usuário mas servem como guia de leitura e entendimento do código para o desenvolvedor. Os comentários precisam estar inseridos entre <span class="wordEn">&lt;!--</span> e <span class="wordEn">--&gt;</span> para funcionarem.</p>
+        <p class="exampleParagraph">Exemplo:</p>
+        <table class="codeTable">
+            <tr>
+                <td class="lineNumber">
+                    1<br>
+                    2<br>
+                    3<br>
+                    4<br>
+                    5<br>
+                    6<br>
+                    7<br>
+                    8<br>
+                    9<br>
+                    10<br>
+                    11<br>
+                </td>
+                <td class="lineCode">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    <span class="tab"></span>&lt;head&gt;<br>
+                    <span class="tab"></span> <span class="tab"></span>&lt;meta charset="utf-8"&gt;<br>
+                    <span class="tab"></span> <span class="tab"></span>&lt;title&gt;Minha página pessoal!&lt;/title&gt; &lt;!-- Aqui temos o título da página --&gt;<br>
+                    <span class="tab"></span>&lt;/head&gt;<br>
+                    <span class="tab"></span>&lt;body&gt;<br>
+                    <span class="tab"></span><span class="tab"></span>Essa é minha primeira página! &lt;!-- Aqui temos o conteúdo visível da página --&gt;<br>
+                    <span class="tab"></span><span class="tab"></span>Espero que gostem! &lt;!-- Nenhum comentário será visível para o usuário --&gt;<br>
+                    <span class="tab"></span>&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </td>
+            </tr>
+        </table>
+        <p class="exampleParagraph">Resultado visível do exemplo:</p>
+        <table class="result">
+            <tr>
+                <td>Essa é minha primeira página!
+                Espero que gostem!</td>
+            </tr>          
+        </table>
+        
+        <p class="normalParagraph">Os comentários são de suma importância e sua qualidade informativa é proporcional à complexidade e tamanho do código, quanto mais difícil e longo ele é, mais os comentários ajudam tanto quem escreveu quanto quem irá modificar a entender o que foi feito. Os comentários também servem para fazer testes no código, ativando ou desativando elementos com rapidez sem deletar nenhuma linha. A maioria das IDEs possuem atalhos para transformar a seleção em comentário, caso o atalho ctrl+/ do Sublime 3 não esteja funcionando troque nas preferences por outro atalho, como ctrl+1.</p>
+    </div>
+
+    <table class="nextPage"><td>
+        <a href="html-part02.html">Próxima Parte</a></td>
+    </table>
+
+</div>
+
+
+</body>
+</html>
